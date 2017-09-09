@@ -6,5 +6,9 @@ This application is the prototype of the Reddit, single page architecture built 
 ## Setup
 Clone the repository and run the following commands to run this application 
 
+```  
+
 npm install 
 npm run server:dev
+
+```  
