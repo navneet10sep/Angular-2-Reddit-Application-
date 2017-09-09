@@ -1,0 +1,133 @@
+/*styles for home content only*/
+#header
+{
+	width: 100%;
+    height: 70px;
+    min-height: 70px;
+  
+    
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    filter: none;
+}
+
+.postsHolder
+{
+	background: #fff;
+}
+
+#header .page-logo {
+    width: auto;
+    height: 68px;
+    max-height: 68px;
+    line-height: 68px;
+    float: left;
+}
+
+
+
+#header .top-menu {
+    float: right;
+    padding-top: 20px;
+}
+
+#tabs-container
+{
+	padding-top: 10px;
+}
+
+#page-container
+{
+	background: #fff;
+	height: 900px;
+}
+
+.reddit-tabs li > a
+{
+	border-radius: 0px !important;
+	color: #eee; 
+    font-size: 18px;
+    font-weight: 400;
+    padding: 16px 34px;
+    background: #39424a;
+    margin-right: 4px;    
+}
+
+.reddit-tabs li.active > a
+{
+	color: #fff;
+	background: #d93d5e;
+	border: none;
+}
+
+.post-title
+{
+	font-size: 14px;
+	font-weight: 600;
+	font-family: Open Sans;
+	color: #2a3239;
+
+}
+
+.btn, .form-control
+{
+	border-radius: 0px !important;
+}
+
+
+
+.recent-post
+{
+	background: #fafafa;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.rv-title
+{
+	color: #389add;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom:  10px;
+	font-family: "Open Sans",sans-serif;
+	border-bottom: 1px solid #eee;
+}
+
+.red-sunglow
+{
+	background: #ed6b75 !important;
+	border-color: #ea5460 !important;
+}
+
+.blue
+{
+    background-color: #3598dc;
+    border-color: #3598dc;
+}
+
+.green
+{
+	background-color: #32c5d2;
+    border-color: #32c5d2;
+}
+
+.red
+{
+	background-color: #e7505a;
+    border-color: #e7505a;
+}
+
+.search-input {
+    height: 40px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+}
+
+.font-blue
+{
+	color: #86919b;
+}

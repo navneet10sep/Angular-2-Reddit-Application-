@@ -1,0 +1,15 @@
+.postsContainer
+{
+	background: #fff;
+	padding: 20px;
+}
+
+.post-title, .post-title a
+{
+	color: #333;
+}
+
+.post-title:hover, .post-title a:hover
+{
+	text-decoration: underline;
+}

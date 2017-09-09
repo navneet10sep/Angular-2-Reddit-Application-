@@ -1,0 +1,22 @@
+.newpost-container
+{
+	background: #fff;
+	margin-top: 40px;
+}
+
+.link-inpu
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.posttype-panel
+{
+	margin-top: 20px;
+	margin-bottom: 20px;	
+}
+
+.no-radius
+{
+	border-radius: 0px !Important;
+}

@@ -1,0 +1,25 @@
+<div class='postViewHolder'>
+<div class='row'>
+
+<div class='col-md-8'>
+<h3>{{postTitle}}</h3>
+<span> user: {{userName}}, {{userCity}}, {{userCountry}}, - {{postDate}} </span>
+</div>
+
+<div class='col-md-4 text-right'>
+
+<strong>Votes</strong> <br/>
+<div class='btn-group'>
+<button class='btn btn-default' (click)="voteAction('up')"><i class='glyphicon glyphicon-thumbs-up'></i> <span #pvoteUps></span></button>
+<button class='btn btn-default' (click)="voteAction('down')"><i class='glyphicon glyphicon-thumbs-down'></i> <span #pvoteDowns></span></button>
+</div>
+
+</div>
+
+</div>
+
+<hr/>
+
+{{postDesc}}
+
+</div>

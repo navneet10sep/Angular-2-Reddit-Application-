@@ -1,0 +1,129 @@
+ 
+<div class='container-fluid'>
+<div class='container-fluid'>
+<div class='row' id='header'>
+
+<div class="page-logo">
+                    <a>
+                        <img src="assets/img/logo.png" class='reddit-logo' alt="logo" class="logo-default"> </a>
+</div>
+
+<div class='top-menu'>
+
+ <span *ngIf="currentUser" class='font-blue'> Hello {{currentUser.fullName}}</span> 
+ 
+ <span *ngIf="!currentUser" class='font-blue'>Want to join? Log in or sign up in seconds. &nbsp; &nbsp; </span>
+
+ <a *ngIf="!currentUser"  [routerLink]=" ['./login/'] "  class='btn btn-primary red'>Login</a>
+ <a *ngIf="currentUser" (click)="logout()" class='btn btn-primary red'>Logout</a>
+ <a *ngIf="!currentUser" [routerLink]=" ['./register/'] " class='btn btn-primary green'>Signup</a>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='container-fluid' >
+<div class='container-fluid' id='tabs-container'>
+    <div class='row'>
+     <div class='col-md-4'>
+
+      <!-- Categories Tabs -->
+      <ul class="nav nav-tabs reddit-tabs" role="tablist">
+        <li role="presentation" class="active"><a (click)="loadPosts('hot')" role="tab" data-toggle="tab"> <i class='glyphicon glyphicon-fire'></i> Hot</a></li>
+     
+        <li role="presentation"><a  (click)="loadPosts('new')" role="tab" data-toggle="tab">
+        <i class='glyphicon glyphicon-star'></i> New</a></li>
+
+  
+
+      </ul>
+
+     </div> 
+
+     <div class='col-md-4'>
+
+      <div class="input-group">
+        <input type="text" class="form-control search-input" placeholder="Search posts ... " #searchQuery>
+        <span class="input-group-btn">
+          <button (click)="getPage(1)"  class="btn btn-primary search-input blue" type="button"><i class='glyphicon glyphicon-search'></i></button>
+        </span>
+      </div><!-- /input-group -->
+
+     </div>
+
+     <div class='col-md-4 text-right'> 
+
+      <button class='btn btn-primary red-sunglow' (click)="createNewPost('text')"> <i class='glyphicon glyphicon-edit'></i> Submit a new text post</button>
+      <button class='btn btn-primary blue' (click)="createNewPost('link')"> <i class='glyphicon glyphicon-link'></i> Submit a new link </button>
+
+
+     </div> 
+    </div> 
+
+
+    <div class='row'>
+     <div class='col-md-12'>
+      <div class='container-fluid'>
+
+      <div class='row' style='display: none;' #newpostContainer>
+      <div class='col-md-8 col-md-offset-2 col-sm-12'>
+      <newpost></newpost>
+      </div>
+      </div>
+
+      <div class='row postsHolder' #postViewContainer style='display: none;'>
+      
+      <div class='col-md-12'>
+      <postview #postview></postview>
+      </div>
+
+      </div>
+
+
+      <div class='row postsHolder' #postsContainer   >
+      
+      <div class='col-md-12'>
+
+      <div #postViewRef></div>
+
+      <ul class="post-list">
+          <li *ngFor="let meal of asyncMeals | async | paginate: { id: 'server', itemsPerPage: 10, currentPage: p, totalItems: total }">
+              {{ meal }}
+          </li>
+      </ul> 
+
+       <div class="has-text-centered">
+          <div class="spinner" [ngClass]="{ 'hidden': !loading }"></div>
+          <pagination-controls (pageChange)="getPage($event)" id="server"></pagination-controls>
+      </div>
+       
+
+      </div>
+ 
+
+      </div>
+
+      </div>
+      </div>
+     </div>
+     
+
+</div> 
+</div>
+
+
+<modal #modal>
+    <modal-header>
+        <h4 class="modal-title">Reddit</h4>
+    </modal-header>
+    <modal-body>
+        <h4 class='bold'>Please login to your account.</h4> 
+        if you do not have an accoun then <a [routerLink]=" ['./../register'] " >click here</a> to register
+    </modal-body>
+    <modal-footer>
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="modal.dismiss()">Cancel</button>
+        <a type="button" class="btn btn-primary" [routerLink]=" ['./../login'] " >Login</a>
+    </modal-footer>
+</modal>

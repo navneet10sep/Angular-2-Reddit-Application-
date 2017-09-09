@@ -1,0 +1,19 @@
+<div class='row postsContainer'>
+
+<div class='col-md-8'>
+<h3 class='post-title' (click)="viewPost()" *ngIf="postType == 'text' " >{{postTitle}}</h3>
+<h3 class='post-title' *ngIf="postType == 'link' " ><a [href]="sanitize(postLink)" target="_blank">{{postTitle}}</a></h3>
+<span> user: {{userName}}, {{userCity}}, {{userCountry}}, - {{postDate}} </span>
+</div>
+
+<div class='col-md-4 text-right'>
+
+<strong>Votes</strong> <br/>
+<div class='btn-group'>
+<button class='btn btn-default' (click)="voteAction('up')"><i class='glyphicon glyphicon-thumbs-up'></i> <span #voteUps></span></button>
+<button class='btn btn-default' (click)="voteAction('down')"><i class='glyphicon glyphicon-thumbs-down'></i> <span #voteDowns></span></button>
+</div>
+
+</div>
+
+</div>
