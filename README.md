@@ -1,11 +1,4 @@
-<p align="center">
- 
-    <img width="800" alt="Reddit" src="https://raw.githubusercontent.com/navneet10sep/Angular-2-Reddit-Application-/master/reddit.jpg">
- 
-</p>
 
-___
- 
  # Angular 2 Reddit Applicaiton 
  
 ## Description
